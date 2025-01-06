@@ -1,16 +1,26 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "./globals.css";
+import "./ui/globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
+const jetBrainsMono = localFont({
+  src: "./fonts/JetBrainsMono-Regular.ttf",
+  variable: "--font-jetbrains-mono",
   weight: "100 900",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
+const alibaba = localFont({
+  src: "./fonts/Alibaba-PuHuiTi-Regular.ttf",
+  variable: "--font-alibaba",
   weight: "100 900",
+});
+const jetBrainsMonoSemiBold = localFont({
+  src: "./fonts/JetBrainsMono-SemiBold.ttf",
+  variable: "--font-jetbrains-mono-semi-bold",
+  weight: "400 900",
+});
+const jetBrainsMonoSemiBoldItalic = localFont({
+  src: "./fonts/JetBrainsMono-SemiBoldItalic.ttf",
+  variable: "--font-jetbrains-mono-semi-bold-italic",
+  weight: "400 900",
 });
 
 export const metadata: Metadata = {
@@ -26,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${jetBrainsMono.variable} ${alibaba.variable} ${jetBrainsMonoSemiBold.variable} ${jetBrainsMonoSemiBoldItalic.variable} antialiased`}
       >
         {children}
       </body>
